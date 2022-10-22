@@ -2,6 +2,7 @@
 import express from "express";
 import cors from "cors";
 import morgan from "morgan";
+import routes from './routes/index.routes'
 import swaggerUI from "swagger-ui-express";
 import swaggerJsDoc from "swagger-jsdoc";
 import { options } from "../config/swaggerOptions";
@@ -25,7 +26,7 @@ export default function App() {
 	const specs = swaggerJsDoc(options);
 
 	// Routes
-	//app.use("/api", routes);
+	app.use("/api", routes);
 	app.use("/docs", swaggerUI.serve, swaggerUI.setup(specs));
 	return app;
 }

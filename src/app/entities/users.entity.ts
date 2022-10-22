@@ -33,14 +33,14 @@ export default class User extends UuidEntity {
 		length: 191,
 		comment: "Nombres.",
 	})
-	public first_name!: string;
+	public firstName!: string;
 
 	@Column({
 		type: "varchar",
 		length: 191,
 		comment: "Apellidos.",
 	})
-	public last_name!: string;
+	public lastName!: string;
 
 	@Column({
 		type: "bool",

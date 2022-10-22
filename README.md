@@ -27,6 +27,7 @@ El proposito de este repositorio consiste en la implementacion de un API REST co
 		DB_PASSWORD=postgres
 		DB_DATABASE=todo_app_db
 		NODE_PORT=5000
+		SECRET_JWT_SEED=TEST_DEV
 		```
 	5. Instalar las dependencias del `package.json`
 	6. Correr la aplicaición.
@@ -48,4 +49,10 @@ npm run dev
 ### Preparar y ejerutar la app para producción
 ```bash
 npm start
+```
+## Lista de endpoints
+```javascript
+http://127.0.0.1:8000/api/login
+http://127.0.0.1:8000/api/register
+http://127.0.0.1:8000/api/refresh-token
 ```
